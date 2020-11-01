@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+   <link rel="stylesheet" href="style.css">
+   <link rel="stylesheet" href="count.js">
+</head>
+<body>
+   
+    <div class="container">
+        <h1>Даня говорит "А"</h1>
+        <p>Привет, Глеб!</p>
+        <p><strong>Количество: <a id="clicks">0</a></strong></p>
+        
+        <script type="text/javascript">
+    var clicks = 0;
+    function onClick() {
+        clicks += 1;
+        document.getElementById("clicks").innerHTML = clicks;
+    };
+    </script>
+
+     <script>
+    function playLaugh() {
+          var sound = document.getElementById("audio");
+          sound.play();
+      }
+    </script>
+
+    <button type="button" onClick="onClick()" id="playLaugh">
+    	 <audio id="audio" src="danya.mp3" autostart="true" ></audio>
+    	<img alt="" src="./danya.png" onClick="playLaugh()">
+    	Акнуть
+    </button>
+    </div>
+    <audio id="laugh">
+        <source src="danya.mp3" type="audio/mpeg">
+    </audio>
+
+   
+</body></html>
